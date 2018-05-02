@@ -1,5 +1,5 @@
 (function ($) {
-    $.fn.progressloader = function (url, formname) {
+    $.fn.progressloader = function (url, formname, callback) {
         var createElements = function (initor) {
             var maxSize = initor.attr('data-max-file-size');
 
@@ -124,6 +124,9 @@
             uploader.copyButton.attr('data-clipboard-text', e.value);
             uploader.openButton.attr('href', e.value);
             uploader.address.show();
+            if (callback) {
+                callback(e)
+            }
         }
 
         createElements(this);
