@@ -1,0 +1,25 @@
+{
+  "name": "jquery-progress-upload",
+  "version": "1.0.0",
+  "description": "A library to show progress and open button for file uploader.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anduin2017/jquery-upload-progress.git"
+  },
+  "keywords": [
+    "jquery",
+    "file",
+    "uploader",
+    "plugin"
+  ],
+  "author": "Anduin@aiursoft.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Anduin2017/jquery-upload-progress/issues"
+  },
+  "homepage": "https://github.com/Anduin2017/jquery-upload-progress#readme"
+}
