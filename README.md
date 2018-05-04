@@ -2,6 +2,10 @@
 
 A library to show progress and open button for file uploader.
 
+## Example
+
+Click [here](https://colossus.aiursoft.com) to view an example.
+
 ## How to install
 
 ```bash
