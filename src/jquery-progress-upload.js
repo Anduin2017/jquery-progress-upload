@@ -46,8 +46,8 @@
             }
         }
 
-        var startSubmitting = function () {
-            event.preventDefault();
+        var startSubmitting = function (e) {
+            e.preventDefault();
             var elements = getElements();
             if (settings.onStartSubmitting) {
                 settings.onStartSubmitting(elements);
