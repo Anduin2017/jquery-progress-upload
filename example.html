@@ -1,0 +1,10 @@
+<form action="/example.html" method="post" enctype="multipart/form-data">
+    <input type="file" id="file" />
+    <input type="submit" value="upload" />
+</form>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./src/jquery-progress-upload.js"></script>
+<script>
+    var settings = {};
+    $('#file').setProgressedUploader(settings);
+</script>

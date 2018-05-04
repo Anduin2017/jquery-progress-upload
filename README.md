@@ -26,7 +26,7 @@ And add your reference:
 Create a form
 
 ```html
-<form id="myform">
+<form action="/api/upload" method="post" enctype="multipart/form-data">
     <input type="file" id="file" data-max-file-size="30M" />
 </form>
 ```
@@ -34,7 +34,8 @@ Create a form
 Add add the following javascript.
 
 ```javascript
-    $('#file').progressloader('/api/upload','#myform');
+var settings = { };
+$('#file').setProgressedUploader(settings);
 ```
 
 Run your app and upload a file.
@@ -49,4 +50,36 @@ For example:
 var file = Request.Form.Files.First();
 var fileStream = new FileStream(GetCurrentDirectory(), FileMode.Create);
 await file.CopyToAsync(fileStream);
+```
+
+## API
+
+```javascript
+var settings = {
+    onInit: function (elements) {
+        //Occurs when element loads.
+    },
+
+    onGetFile: function (elements) {
+        //Occurs when user put a file in it.
+    },
+
+    onStartSubmitting: function (elements) {
+        //Occurs when user is submitting the form.
+    },
+
+    onProcessing: function (elements) {
+        //Occurs when all data transformed.
+    },
+
+    onFinish: function (elements, data) {
+        //Occurs when server gives response.
+    },
+    
+    onError: function(e){
+        //Occurs when server could not accept the file.
+    }
+};
+
+$('#file').setProgressedUploader(settings);
 ```
