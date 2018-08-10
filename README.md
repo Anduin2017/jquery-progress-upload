@@ -1,5 +1,7 @@
 # jquery-progress-upload
 
+[![npm](https://img.shields.io/npm/v/jquery-progress-upload.svg?style=flat)](https://www.npmjs.com/package/jquery-progress-upload)
+
 A library to show progress and open button for file uploader.
 
 ## Example
