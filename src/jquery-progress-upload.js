@@ -1,21 +1,27 @@
 (function ($) {
     $.fn.setProgressedUploader = function (settings) {
+        function s4() {
+            return Math.floor((1 + Math.random()) * 0x10000)
+            .toString(16)
+            .substring(1);
+        }
+        var guid = s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
         var createElements = function (initor) {
             var progressbar = '\
-            <div id="progress">\
-                <div id="progressbar" role="progressbar"></div>\
+            <div id="progress-' + guid + '">\
+                <div id="progressbar-' + guid + '" role="progressbar"></div>\
             </div>';
 
-            var message = '<p id="message"></p>';
+            var message = '<p id="message-' + guid + '"></p>';
             initor.after(message);
             initor.after(progressbar);
         }
 
         var getElements = function () {
             var elements = {
-                progress: $('#progress'),
-                progressbar: $('#progressbar'),
-                message: $('#message')
+                progress: $('#progress-' + guid),
+                progressbar: $('#progressbar-' + guid),
+                message: $('#message-' + guid)
             };
             return elements;
         }
