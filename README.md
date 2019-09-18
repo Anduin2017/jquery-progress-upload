@@ -4,10 +4,6 @@
 
 A library to show progress and open button for file uploader.
 
-## Example
-
-Click [here](https://developer.aiursoft.com/Samples/FormSample) to view an example.
-
 ## How to install
 
 ```bash
