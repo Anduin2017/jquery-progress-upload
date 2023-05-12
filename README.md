@@ -7,7 +7,7 @@ A library to show progress and open button for file uploader.
 ## How to install
 
 ```bash
-$ npm install jquery-progress-upload
+npm install jquery-progress-upload
 ```
 
 And add your reference:
