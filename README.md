@@ -1,6 +1,7 @@
 # jquery-progress-upload
 
 [![npm](https://img.shields.io/npm/v/jquery-progress-upload.svg?style=flat)](https://www.npmjs.com/package/jquery-progress-upload)
+[![ManHours](https://manhours.aiursoft.cn/gitlab/gitlab.aiursoft.cn/anduin/jquery-progress-upload)](https://gitlab.aiursoft.cn/anduin/jquery-progress-upload/-/commits/master?ref_type=heads)
 
 A library to show progress and open button for file uploader.
 
