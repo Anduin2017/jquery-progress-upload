@@ -42,13 +42,13 @@
         }
 
         //Occurs when user put in a file
-        var getFile = function () {
+        var clearProgress = function () {
             var elements = getElements();
             elements.progressbar.css('width', '0%');
             elements.progress.show();
             elements.message.html('0%');
-            if (settings.onGetFile) {
-                settings.onGetFile(elements);
+            if (settings.onclearProgress) {
+                settings.onclearProgress(elements);
             }
         }
 
@@ -83,7 +83,7 @@
                 },
                 success: finish,
                 error: function (e) {
-                    getFile();
+                    clearProgress();
                     if (settings.onError) {
                         settings.onError();
                     }
@@ -100,7 +100,7 @@
 
         var finish = function (data) {
             var elements = getElements();
-            getFile();
+            clearProgress();
             if (settings.onFinish) {
                 settings.onFinish(elements, data);
             }
@@ -111,7 +111,7 @@
         var form = this.parents().filter("form").first();
         setClass(elements);
         init(elements);
-        this.on('change', getFile);
+        this.on('change', clearProgress);
         form.submit(startSubmitting);
     }
 }(jQuery))
